@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Advanced CSS</title>
+        <style>
+            pre {
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            div.div0 {
+                background-color: #61ff61;
+                width: 100px;
+                height: 100px;
+                transition: width 2s;
+            }
+
+            div.div0:hover {
+                width: 600px;
+            }
+
+            div.div1 {
+                width: 100px;
+                height: 100px;
+                background-color: #88ff61;
+                transition: width 2s, height 2s;
+            }
+
+            div.div1:hover {
+                width: 600px;
+                height: 200px;
+            }
+            
+            div.div2 {
+                width: 100px;
+                height: 100px;
+                background-color: #d7ff61;
+                text-align: center;
+                font-size: 20px;
+                font-weight: thin;
+                color: 	#808000;
+                transition: width 2s;
+            }
+
+            div.div2:hover { 
+                transition-timing-function: ease;
+                width: 600px;
+            }
+
+            div.div3 {
+                width: 100px;
+                height: 100px;
+                background-color: #61ff88;
+                text-align: center;
+                font-size: 20px;
+                font-weight: thin;
+                color: rgba(0,0,0,0.5);
+                transition: width 2s;
+            }
+
+            div.div3:hover {
+                transition-timing-function: linear;
+                width: 600px;
+                          
+            }
+
+            div.div4 {
+                width: 100px;
+                height: 100px;
+                background-color: #61ffb0;
+                text-align: center;
+                font-size: 20px;
+                font-weight: thin;
+                color: rgba(0,0,0,0.5);
+                transition: width 2s;
+            }
+
+            div.div4:hover {
+                transition-timing-function:ease-in;
+                width: 600px;
+            }
+
+            div.div5 {
+                width: 100px;
+                height: 100px;
+                background-color: #61ffd7;
+                text-align: center;
+                font-size: 20px;
+                font-weight: thin;
+                color: rgba(0,0,0,0.5);
+                transition: width 2s;
+            }
+
+            div.div5:hover {
+                transition-timing-function:ease-out;
+                width: 600px;
+            }
+
+            div.div6 {
+                width: 100px;
+                height: 100px;
+                background-color: #61ffff;
+                text-align: center;
+                color: rgba(0,0,0,0.5);
+                font-size: 20px;
+                font-weight: thin;
+                transition: width 2s;
+            }
+
+            div.div6:hover {
+                transition-timing-function: ease-in-out;
+                width: 600px;
+            }
+
+            div.div7 {
+                width: 100px;
+                height: 100px;
+                background-color: #33FFBD;
+                transition: width 3s;
+                transition-delay: 1s;
+            }
+
+            div.div7:hover {
+                width: 600px;
+            }
+
+            div.div8 {
+                width: 100px;
+                height: 100px;
+                background-color: #75FF33;
+                transition: width 2s, height 2s, transform 2s;
+            }
+
+            div.div8:hover {
+                width: 300px;
+                height: 300px;
+                transform: rotate(180deg);
+            }
+
+            div.div9 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation-name: example0;
+                animation-duration: 4s;
+            }
+
+            @keyframes example0 {
+                from {background-color: red;}
+                to {background-color: yellow;}
+            }
+
+            .div10 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation-name: example1;
+                animation-duration: 4s;
+            }
+
+            @keyframes example1 {
+                0% {background-color: red;}
+                25% {background-color: yellow;}
+                50% {background-color: blue;}
+                100% {background-color: green;}
+            }
+
+            .div11 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: relative;
+                animation-name: example2;
+                animation-duration: 4s;
+            }
+
+            @keyframes example2 {
+                0% {background-color: red; left: 0px; top: 0px;}
+                25% {background-color:yellow; left: 200px; top: 0px;}
+                50% {background-color:blue; left: 200px; top: 200px;}
+                75% {background-color:green; left:0px; top: 200px}
+                100% {background-color:red; left: 0px; top: 0px;}
+            }
+
+            .div12 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: relative;
+                animation-name: example3;
+                animation-duration: 4s;
+                animation-delay: 2s;
+            }
+
+            @keyframes example3 {
+                0% {background-color: red; left: 0px; top: 0px;}
+                25% {background-color:yellow; left: 200px; top: 0px;}
+                50% {background-color:blue; left: 200px; top: 200px;}
+                75% {background-color:green; left:0px; top: 200px}
+                100% {background-color:red; left: 0px; top: 0px;}
+            }
+
+            .div13 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: relative;
+                animation-name: example4;
+                animation-duration: 4s;
+                animation-delay: -2s;
+            }
+
+            @keyframes example4 {
+                0% {background-color: red; left: 0px; top: 0px;}
+                25% {background-color:yellow; left: 200px; top: 0px;}
+                50% {background-color:blue; left: 200px; top: 200px;}
+                75% {background-color:green; left:0px; top: 200px}
+                100% {background-color:red; left: 0px; top: 0px;}
+            }
+
+            .div14 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: relative;
+                animation-name: example5;
+                animation-duration: 4s;
+                animation-iteration-count: 3;
+            }
+
+            @keyframes example5 {
+                0% {background-color: red; left: 0px; top: 0px;}
+                25% {background-color:yellow; left: 200px; top: 0px;}
+                50% {background-color:blue; left: 200px; top: 200px;}
+                75% {background-color:green; left:0px; top: 200px}
+                100% {background-color:red; left: 0px; top: 0px;}
+            }
+
+            .div15 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: relative;
+                animation-name: example6;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes example6 {
+                0% {background-color: red; left: 0px; top: 0px;}
+                25% {background-color:yellow; left: 200px; top: 0px;}
+                50% {background-color:blue; left: 200px; top: 200px;}
+                75% {background-color:green; left:0px; top: 200px}
+                100% {background-color:red; left: 0px; top: 0px;}
+            }
+
+
+
+        </style>
+    </head>
+<body>
+    <h1>CSS Transitions Property</h1>
+    <p>CSS transitions allows you to change property values smoothly, over a given duration.</p>
+    <pre>Following are the properties used for transitions:
+         (a)Transition 
+         (b)Transition-delay
+         (c)Transition-duration
+         (d)Transition-property 
+         (e)Transition-timing-function    
+
+         To create a transition effect, you must specify two things:
+         (1)the CSS property you want to add an effect to
+         (2)the duration of the effect
+
+         <b>Note:</b>If it is not specified, the transition will have no effect, because the default value is 0.   
+    </pre>
+    <p>For example: if width & height equals to 100px and the transition effect is specified (let's say width is set to 2 seconds). The transition will only start if the specified CSS proeprty (width) changes value for the <i>hover.</i> See below.</p>
+    <div class="div0"></div>
+    <p>See a div with a transition effect for both the width and height property below.</p>
+    <div class="div1"></div>
+    <h1>Specify the speed curve of the transition</h1>
+    <p>The transition-timing-function property specifies the speed curve of the transition effect. </p>
+    <pre>This timing function property has following values:
+         (a)ease: specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+         (b)linear: specifies same speed from start to end
+         (c)ease-in: slow start
+         (d)ease-out: slow end
+         (e)ease-in-out: slow start & end
+         (d)cubic bezier (n,n,n,n)let's you define your own value
+    </pre>
+    <div class="div2">ease</div>
+    <br>
+    <div class="div3">linear</div>
+    <br>
+    <div class="div4">ease-in</div>
+    <br>
+    <div class="div5">ease-out</div>
+    <br>
+    <div class="div6">ease-in-out</div>
+    <h1>Delay the transition effect</h1>
+    <p>This property specifies the delay in seconds for the transition effect.</p>
+    <p>The following example has a 1 second delay before starting.</p>
+    <div class="div7"></div>
+    <h1>transition + Transform</h1>
+    <div class="div8"></div>
+    <p><b>Note:</b> Transition properties can be specified one by one or by using shorthand property.</p>
+    <pre>For example: div {transition-proeprty: width;
+                           transition-duration: 2s;
+                           transition-timing-function: linear;
+                           transition-delay: 1s;
+                           <i>could also be written as:</i>
+                           transition: width 2s linear 1s;}
+    </pre>
+    <h1>CSS Animations</h1>
+    <p>CSS allows animation of HTML elements wuthiout using JavaScript</p>
+    <p>An element lets an element gradually change from one style to another.</p>
+    <p>To use CSS animation, you must first specify some keyframes for the animation. Keyframes hold what style an element will have at certain points.</p>
+    <h1>THe @keyframes Rule</h1>
+    <p>Once you specify CSS styles inside the @keyframes rule, the animation will gradually change from one style to another style at certain times.</p>
+    <p>To get an animation to work, you must bind the animation to an element.</p>
+    <p>The animation-duration property defines how long an animation should take time to complete. If the animation-duration property is not specified, no animation will occur, because the default value is 0seconds.</p>
+    <div class="div9"></div>
+    <p>It is also possible to use percent rather than using from and to which only specifies 2 kind of percentages (starts at 0% and end at 100%), by using percentage, you can add as many styles as you want.</p>
+    <p>The following example will change the background-color of the div element when the animation is 25%, complete 50% and then again when the animation is at 100%.</p>
+    <div class="div10"></div>
+    <p>The follwoing example will change the background-color and the position of the div element when the animation is 25% complete, 50% complete, 75% and then again 100% complete.</p>
+    <div class="div11"></div>
+    <h1>Delay an Animation</h1>
+    <p>The animation delay property specifies a delay for the start of an animation.</p>
+    <div class="div12"></div>
+    <p>Negatuve values are also allowed. If using negative values, the animation will start as if had already been playing for N seconds.</p>
+    <div class="div13"></div>
+    <h1>Set How Many Times an Animation Should Run</h1>
+    <p>The animation iteration-count property specifies the number of times an animation should run.</p>
+    <div class="div14"></div>
+    <p>The following example uses the value "infinite" to make the animation continue forever.</p>
+    <div class="div15"></div>
+</body>
+</html>
