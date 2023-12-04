@@ -253,8 +253,150 @@
                 100% {background-color:red; left: 0px; top: 0px;}
             }
 
+            .div16 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: relative;
+                animation-name: example7;
+                animation-duration: 3s;
+                animation-fill-mode: backwards;
+            }
 
+            @keyframes example7 {
+                from {top: 0px;}
+                to {top: 200px; background-color: blue;}
+            }
 
+            .div17 {
+                width: 100px;
+                height: 50px;
+                background-color: red;
+                font-weight: bold;
+                position: relative;
+                animation: timingfnc 5s;
+                animation-fill-mode: forwards;
+            }
+
+            .div18 {
+                width: 100px;
+                height: 50px;
+                background-color: red;
+                font-weight: bold;
+                position: relative;
+                animation: timingfnc 5s;
+                animation-fill-mode: forwards;
+            }
+
+            .div19 {
+                width: 100px;
+                height: 50px;
+                background-color: red;
+                font-weight: bold;
+                position: relative;
+                animation: timingfnc 5s;
+                animation-fill-mode: forwards;
+            }
+
+            .div20 {
+                width: 100px;
+                height: 50px;
+                background-color: red;
+                font-weight: bold;
+                position: relative;
+                animation: timingfnc 5s;
+                animation-fill-mode: forwards;
+            }
+
+            .div21 {
+                width: 100px;
+                height: 50px;
+                background-color: red;
+                font-weight: bold;
+                position: relative;
+                animation: timingfnc 5s;
+                animation-fill-mode: forwards;
+            }
+
+            .div17 {animation-timing-function: linear;}
+            .div18 {animation-timing-function: ease;}
+            .div19 {animation-timing-function: ease-in;}
+            .div20 {animation-timing-function: ease-out;}
+            .div21 {animation-timing-function: ease-in-out;}
+
+            @keyframes timingfnc {
+                from {left: 0px;}
+                to {left: 300px;}
+            }
+
+            .tooltip {
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+            }
+
+            .tooltip .tooltiptxt {
+                visibility: hidden;
+                width: 120px;
+                background-color: black;
+                color: #fff;
+                border-radius: 6px;
+                padding: 5px 0;
+                position: absolute;
+                z-index: 1;
+            }
+
+            .tooltip:hover .tooltiptxt {
+                visibility: visible;
+            }
+
+            .tooltip0 {
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+            }
+
+            .tooltip0 .tooltiptxt0 {
+                visibility: hidden;
+                width: 120px;
+                background-color: black;
+                color: #fff;
+                border-radius: 6px;
+                padding: 10px 0;
+                position: absolute;
+                z-index: 1;
+                top: -10;
+                left: 105%;
+            }
+            
+            .tooltip0:hover .tooltiptxt0 {
+                visibility: visible;
+            }
+
+            .tooltip1 {
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+            }
+
+            .tooltip1 .tooltiptxt1 {
+                visibility: hidden;
+                width: 120px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                position: absolute;
+                z-index: 1;
+                top: -5;
+                top: 105%;
+                margin-left: -60px;
+            }
+
+            .tooltip1:hover .tooltiptxt1 {
+                visibility: visible;
+            }
         </style>
     </head>
 <body>
@@ -334,5 +476,69 @@
     <div class="div14"></div>
     <p>The following example uses the value "infinite" to make the animation continue forever.</p>
     <div class="div15"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Specify the fill-mode For an Animation</h1>
+    <p>Since CSS animation does not affect an element before the first keyframe is played or after the last keyframe is played. The animation-fill-mode property can override this behaviour. </p>
+    <p>The animation-fill-mode property specifies a style for the target element when the animation is not playing (before it starts, after it ends, or both.) </p>
+    <pre>The animation-fill-mode property can have the following values:
+         (a)none - default. animation will not apply any styles to the element before or after its executing.
+         (b)forwards - element will retain the style values that is set by the <b>last keyframe</b> (depends on animation-direction and animation-iteration-count.)
+         (c)backwards - element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period.
+         (d)both - the animation will follow the rules for both forwards and backwards, extending the animation properties in both directions.
+    </pre>
+    <p>Let the div element retain the style values set by the last keyframe when the animation ends.</p>
+    <div class="div16"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Specify the Speed Curve of the Animation</h1>
+    <p>The animation-timing-function property specifies the speed curve of the animation.</p>
+    <p>Just like the transition effect we studied in the previous chapter, this property in animation has the same values including ease, ease-in, ease-out, ease-in-out & cubic-bezier (n,n,n).</p>
+    <div class="div17">linear</div>
+    <br>
+    <div class="div18">ease</div>
+    <br>
+    <div class="div19">ease-in</div>
+    <br>
+    <div class="div20">ease-out</div>
+    <br>
+    <div class="div21">ease-in-out</div>
+    <h1>CSS Tooltips</h1>
+    <h2>Basic Tooltip</h2>
+    <p>Move the mouse over the text below:</p>
+    <div class="tooltip">Hover over me
+        <span class="tooltiptxt">Tooltip text</span>
+    </div>
+    <br>
+    <h1>Positioning Tooltips</h1>
+    <h2>Left Tooltip</h2>
+    <p>Move the mouse over the text below:</p>
+    <div class="tooltip0">Hover over me
+        <span class="tooltiptxt0">Tooltip Text</span>
+    </div>
+    <br>
+    <h2>Right Tooltip</h2>
+    <p>Move the mouse over the text below:</p>
+    <div class="tooltip1">Hover over me 
+        <span class="tooltiptxt1">Tooltip text</span>
+    </div>
+    <br>
 </body>
 </html>
